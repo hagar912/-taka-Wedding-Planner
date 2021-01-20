@@ -1,0 +1,306 @@
+/* beging of love story page */
+.bigimg{
+    width:1349px;
+    height: 699px;
+    position:absolute ;
+    top:0px;
+    left:0px;
+    opacity: .8;
+}
+
+.headdiv{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width:1349px;
+    padding: 0px;
+    height: 70px;
+    background-color: rgba(255,255,255,.7);
+}
+
+td,a{
+
+    text-align: center;
+    text-decoration: none;
+    color: rgb(240, 115, 117) ;
+}
+
+.tablehead{
+    position: absolute;
+    left:500px;
+    top: 20px; 
+    border: none; 
+    width:800px;
+    font-family: cursive;
+    font-size: 20px;
+    color: darkslategray;
+}
+
+/*lovely story with first div */
+#storydiv1,.storydiv2,.storydiv3,.storydiv4,.storydiv5{
+    position: relative;
+    top:1040px;
+    margin: 15px;
+    border: 8px solid  rgba(0,0,0,.1);
+    padding: 0px;
+    height: 530px;
+    width:1340x;
+    background-color: rgba(0,0,0,.95);
+}
+.storydiv2,.storydiv5{
+    position: relative;
+    top:1400px;
+    background-color: rgba(0,0,0,.85);
+}
+.storydiv3{
+    position: relative;
+    top:1750px;
+    background-color: rgba(0,0,0,.75);
+}
+.storydiv4{
+    position: relative;
+    top:2100px;
+    background-color: rgba(0,0,0,.65);
+}
+.storydiv5{
+    position: relative;
+    top:2400px;
+}
+
+
+/* style for prgraph div */
+.pls1,.pls2,.pls3,.pls4,.pls5{
+    position: absolute;
+    top: -280px;
+    left: 210px;
+    margin: 15px;
+    border: 1.5px double rgba(235, 115, 117, .3);
+    padding: 10px;
+    padding-left: 75px;
+    padding-right: 75px;
+    text-decoration: underline;
+    color: rgb(235, 115, 117) ;
+    font-family: 'Sofia','Allan',cursive ,monospace ,fantasy;
+    font-size: 80px;
+}
+.pls5{
+    top: -200px;
+    font-size: 60px;
+}
+
+/* style for pictures */
+.picls1,.picls2,.picls3,.picls4,.picls5 {
+    position: absolute;
+    top:45px;
+    left: 50px;
+    border: 2px solid rgb(235, 115, 117);
+    padding: 7px;
+    width: 600px;
+    height: 399px;
+}
+/* style for customer's review */ 
+.revc1,.revc2,.revc3,.revc4,.revc5{
+    position: absolute;
+    top:40px;
+    left: 740px;
+    width: 425px;
+    border: 2px dashed rgb(235, 115, 117);
+    padding: 30px;
+    color: rgba(235, 115, 117,.95);
+    font-family: 'Allan','Sofia',cursive ,monospace ,fantasy;
+    font-size: 25px;
+    text-align: center;
+}
+.revc2,.revc5{
+    color: rgba(235, 115, 117,.85);
+}
+.revc3{
+    top:65px;
+    color: rgba(235, 115, 117,.75);
+}
+.revc4{
+    color: rgba(235, 115, 117,.65);
+}
+.revc5{
+    top:65px;
+}
+
+#contact{
+    position: relative;
+    top: 2550px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(17, 17, 17,.9);}
+#contact::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+.imghome{
+    float: left;
+    width: 15.3%;
+    padding:50 90px 0 ;
+    margin-left: 55px;
+
+}
+.ho,.ph,.ma{
+    float: left;
+    color: antiquewhite;
+    font-family:'Allan',cursive ,monospace ,fantasy;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+
+
+
+/* login form */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: rgb(240, 115, 117);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+/* Full-width input fields */
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: rgb(255, 115, 117);
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    position: relative;
+}
+
+img.avatar {
+    width: 60%;
+    height: 40%;
+}
+
+.container {
+    padding: 16px;
+    margin: 0px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: -40px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 3% auto 2% auto; /* 3% from the top, 2% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+
+
+
