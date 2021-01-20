@@ -1,0 +1,119 @@
+
+<html>
+    <head>
+        <title>#taka-Wedding Planner-Login</title>
+        <meta name="description" content="this home page with login form ">
+        <link rel="stylesheet" href="..//css/login.css">
+        <link rel="shortcut icon" type="img/png" href="../img/logo00.png">
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+    </head>
+    <body style="background-color: rgb(243, 243, 243);">
+        <div class="firstdiv">
+            <img src="..//img/sign.jpg" class="bigimg">
+
+            <div class="headdiv">
+                <table class="tableheading">
+                    <tr>
+                        <td><a href="login.php"><button onclick="alert('For Home page ! \nplease login firstly!')" style="width:auto; background-color: transparent;border: none;color:rgb(235, 115, 117);font-family: cursive;font-size: 20px; "><span style="color: rgb(235, 115, 117);">Home</span></button></a></td>
+                        <td>|</td>
+                        <td><a href="login.php"><button onclick="alert('For About Us page ! \nplease login firstly!')" style="width:auto; background-color: transparent;border: none;color:rgb(235, 115, 117);font-family: cursive;font-size: 20px; ">About As</button></a></td>
+                        <td>|</td>
+                        <td><a href="login.php"><button onclick="alert('For Love story page ! \nplease login firstly!')" style="width:auto; background-color: transparent;border: none;color:rgb(235, 115, 117);font-family: cursive;font-size: 20px; ">Love story</button></a></td>
+                        <td>|</td>
+                        <td><a href="login.php"><button onclick="alert('For Packages page \n please login firstly!')" style="width:auto; background-color: transparent;border: none;color:rgb(235, 115, 117);font-family: cursive;font-size: 20px; ">Packages</button></a></td>
+                        <td>|</td>
+                        <td><a href="signin.php"><span style="width:auto; background-color: transparent;border: none;color:rgb(235, 115, 117);font-family: cursive;font-size: 20px;">SignUp</span></a></td>
+                        <td>|</td>
+                        <td><button onclick="document.getElementById('id01').style.display='block'" style="text-decoration-line: underline;width:auto; background-color: transparent;border: none;color:rgb(235, 115, 117);padding: 0;margin: 0;font-family: cursive;font-size: 20px; ">Login</button></td>
+                    </tr>   
+                </table>
+            </div>
+            <img src="../img/word.png" class="secimg">
+            <p class="cel">Celebrating your unique love story</p>
+            <button class="but" onclick="document.getElementById('id01').style.display='block'">Login !</button>
+        </div>
+
+        <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "log_in"; 
+
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+
+        if(isset($_POST['submit'])){
+            $Cname=$_POST['uname'];
+            $Cpassword=$_POST['psw'];
+            $sql = "select Email , Password from usersinfo";
+            $result = mysqli_query($conn,$sql);
+
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while($row =mysqli_fetch_assoc($result)) {
+                    if($Cname==$row["Email"] && $Cpassword==$row["Password"])
+                    {
+                        header('location:home.php');
+                    }
+                    
+
+                }
+            }
+        }
+        mysqli_close($conn);   
+        ?>
+        <!-- login form -->
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="login.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="../notneed/event1.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" id="usrname" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+                    <button type="submit" name="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <div id="message">
+                        <h3>Password must contain the following:</h3>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>#taka-Wedding Planner-Home</title>
+        <meta name="description" content="this home page with login form ">
+        <link rel="stylesheet" href="..//css/home.css">
+        <link rel="shortcut icon" type="img/png" href="../img/logo00.png">
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+    </head>
+    <body style="background-color: rgb(243, 243, 243);">
+        <div class="firstdiv">
+            <img src="..//img/wedd2.jpg" class="bigimg">
+            <div class="headdiv">
+                <table class="tableheading">
+                    <tr>
+                        <td><a href="#homediv"><button onclick="alert('Welcome to #taka  ,,\How are you?')" style="width:auto; background-color: transparent;border: none;color:rgb(235, 115, 117);padding: 0;margin: 0;font-family: cursive;font-size: 20px; "><span style="color: rgb(235, 115, 117);text-decoration-line: underline;">Home</span></button></a></td>
+                        <td>|</td>
+                        <td><a href="aboutus.php" target="_blank">About As</a></td>
+                        <td>|</td>
+                        <td><a href="story.php" target="_blank">Love story</a></td>
+                        <td>|</td>
+                        <td><a href="package.php" target="_blank">Packages</a></td>
+                        <td>|</td>
+                        <td><a href="#contact">Contact Us</a></td>
+                        <td>|</td>
+                        <td><a href="Login.php">LogOut</a></td>
+                    </tr>   
+                </table>
+            </div>
+        </div>
+        
+        <!-- startinf tha home page after image div -->
+        <div id="homediv">
+            <h1 class="parghome">#taka HOME Page</h1>
+            <!-- ABOUT US div -->
+            <div class="aboutdiv">
+                <a href="aboutus.php">
+                <img src="../img/dbla.png" class="img1"></a>
+                <p class="parag"> #taka helps you to Plan your Wedding party<br>(Place ,Decore ,Accessories ,Invitations ,SuperStars ,Photographer)</p>
+            </div>
+
+            <!-- LOVE STORY div -->
+            <div class="storydiv">
+                <a href="story.php">
+                <img src="../img/cls.jpg" class="img1" alt="love story image"></a>
+                <p class="parag">Join #taka to be a part of these love story</p>
+            </div>
+
+            <!-- icon for divide -->
+            <div class="divide">
+                <img src="../img/divideicon.png" width="500px" >
+            </div>
+
+            <!-- EVENTS div -->
+            <div class="eventdiv">
+                <img src="../img/event4.jpg" class="img1" alt="love story image">
+                <p class="parag">FOLLOW US ..<br> To know more about #taka's Event</p>
+            </div>
+
+            <!-- PACKAGES div -->
+            <div class="packagediv">
+                <a href="package.php">
+                <img src="../img/pack4.jpg" class="img1" alt="love story image"></a>
+                <p class="parag">Help us ! <br>Choosing best Wedding Party For You!</p>
+            </div>
+
+            <!-- icon for divide -->
+            <div class="divide1">
+                <img src="../img/divideicon.png" width="500px" >
+
+            </div>
+
+            <!-- CONTACT US div -->
+            <div class="contactdiv">
+                <a href="#contact">
+                <img src="../img/weday.jpg" class="img1" alt="love story image"></a>
+                <p class="parag">Call us to get in touch with #taka's Team</p>
+            </div>
+
+        </div>
+
+        <!--for  contact us -->
+        <div id="contact">
+            <div class="imghome"><img src="../img/map0.png" ><p class="ho">Home<br><span style="color: rgb(185, 185, 185);font-size: 23px;">6, EL-Nozha st.<br> Q.G ,Egypt</span></div>
+            <div class="imghome"><img src="../img/Phone0.png" ><p class="ph">Phone<br><span style="color: rgb(185, 185, 185);font-size: 23px;">+02 01025455148<br>+013 3124285</span></p></div>
+            <div class="imghome"><img src="../img/mail0.png" style="text-align: center;"><p class="ma"> OUR E-Mail ...<br><span style="color: rgb(185, 185, 185);font-size: 23px; "> wedding@example.com <br>#taka@example.com</span></p></div>
+        </div>
+<!--
+        <!-- login form 
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="Home.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="../notneed/event1.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" id="usrname" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+                    <button type="submit" name="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <div id="message">
+                        <h3>Password must contain the following:</h3>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+-->
+    </body>
+</html>
